@@ -82,7 +82,7 @@ const Page = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="counter-area">
+                      <div className="counter-area mt-5 md:mt-0">
                         <div className="counter">
                           <div className="counter-item">
                             <h3 className="number">02+</h3>
@@ -97,7 +97,7 @@ const Page = () => {
                             <p className="subtitle">Happy Client</p>
                           </div>
                         </div>
-                        {/* <div className="circle-area hidden" >
+                        <div className="circle-area hidden md:block" >
                           <div className="circle-text p-3">
                             <Image
                               className="circle-image"
@@ -106,10 +106,12 @@ const Page = () => {
                               height={100}
                               width={100}
                             />
-                            <Imag
+                            <Image
                               className="circle-image circle-image-light d-none"
                               src="assets/img/about-us/circle-text-light.svg"
                               alt="circle-text"
+                              height={100}
+                              width={100}
                             />
                             <span className="arrow-down">
                               <svg
@@ -136,7 +138,7 @@ const Page = () => {
                               </svg>
                             </span>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                       <div className="awards-recognitions">
                         <h2 className="main-common-title">

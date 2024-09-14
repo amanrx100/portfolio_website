@@ -340,7 +340,7 @@ export default function Home() {
                           <div className="project-item">
                             <div className="image">
                               <Image
-                                src="/img/projects/project-1.png"
+                                src="/img/projects/project-2-min.png"
                                 alt="project-1"
                                 className="img-fluid w-100"
                                 height={100}
@@ -373,7 +373,7 @@ export default function Home() {
                           <div className="project-item">
                             <div className="image">
                               <Image
-                                src="/img/projects/xgnr.png"
+                                src="/img/projects/xgnr-min.png"
                                 alt="project-2"
                                 className="img-fluid w-100"
                                 height={100}

@@ -417,7 +417,7 @@ p {
 }
 
 .card-body {
-    padding: 24px;
+    padding: 20px;
 }
 
 .profile-card .image {
@@ -454,7 +454,7 @@ p {
 .common-button-groups .btn {
     background-color: var(--primary);
     border-radius: 8px;
-    padding: 16px 24px;
+    padding: 16px 18px;
     font-size: 16px;
     font-weight: 500;
     color: var(--white);
@@ -811,7 +811,7 @@ p {
 }
 
 .content-box-card .card-body {
-    padding: 48px 40px 40px;
+    padding: 48px 20px 20px;
 }
 
 .content-box-card .top-info {
@@ -906,7 +906,7 @@ p {
 
 .content-box-card .counter-area .counter {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     max-width: 461px;
     flex-grow: 1;
 }
@@ -1964,7 +1964,7 @@ p {
 
 .leave-comments-area .comments-box {
     background-color: var(--background);
-    padding: 50px;
+    padding: 30px;
     border-radius: 8px;
 }
 

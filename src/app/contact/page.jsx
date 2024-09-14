@@ -1,10 +1,59 @@
+"use client";
 import Card from "@/components/Card";
+import axios from "axios";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const page = () => {
+const Page = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    phone: "",
+    message: "",
+  });
+
+  // Handle form data change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Send form data to server via Axios
+      const response = await axios.post(
+        "https://contact-api-ruddy.vercel.app/api/contact",
+        formData
+      );
+      toast.success("Message sent successfully!", {
+        position: "top-center",
+        autoClose: 3000, // Toast will disappear after 3 seconds
+      });
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Error sending message. Please try again later.", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    }
+  };
   return (
     <div>
+      <ToastContainer />
       <div id="page-content">
         <main>
           <section className="content-box-area mt-4">
@@ -22,31 +71,29 @@ const page = () => {
                             Let&#39;s 👋 <span>Work</span> Together
                           </h1>
                           <p>
-                            I&#39;m here to help if you&#39;re searching for a product
-                            designer to bring your idea to life or a design
-                            partner to help take your business to the next
-                            level.
+                            I&#39;m here to help if you&#39;re searching for a
+                            product designer to bring your idea to life or a
+                            design partner to help take your business to the
+                            next level.
                           </p>
                         </div>
                       </div>
                       <div className="contact-area">
                         <div className="leave-comments-area">
                           <div className="comments-box">
-                            <form
-                              id="contact-form"
-                              action="assets/mail.php"
-                              method="POST"
-                            >
+                            <form id="contact-form" onSubmit={handleSubmit}>
                               <div className="row gx-3">
                                 <div className="col-md-6">
                                   <div className="mb-4">
                                     <label className="form-label">Name</label>
                                     <input
                                       name="name"
-                                      required=""
+                                      required
                                       type="text"
                                       className="form-control shadow-none"
                                       placeholder="Enter your name"
+                                      value={formData.name}
+                                      onChange={handleChange}
                                     />
                                   </div>
                                 </div>
@@ -55,84 +102,63 @@ const page = () => {
                                     <label className="form-label">Email</label>
                                     <input
                                       name="email"
-                                      required=""
+                                      required
                                       type="email"
                                       className="form-control shadow-none"
                                       placeholder="Enter your email"
+                                      value={formData.email}
+                                      onChange={handleChange}
                                     />
                                   </div>
                                 </div>
                                 <div className="col-md-6">
                                   <div className="mb-4">
-                                    <label className="form-label">Subject</label>
+                                    <label className="form-label">
+                                      Subject
+                                    </label>
                                     <input
                                       name="subject"
-                                      required=""
+                                      required
                                       type="text"
                                       className="form-control shadow-none"
                                       placeholder="Subject"
+                                      value={formData.subject}
+                                      onChange={handleChange}
                                     />
                                   </div>
                                 </div>
                                 <div className="col-md-6">
                                   <div className="mb-4">
-                                    <label className="form-label">Budget</label>
-                                    <select
-                                      name="budget"
-                                      required=""
-                                      className="form-select shadow-none"
-                                    >
-                                      <option disabled="" selected="">
-                                        Select budget...
-                                      </option>
-                                      <option value="$5000">$5000</option>
-                                      <option value="$5000 - $1000">
-                                        $5000 - $10000
-                                      </option>
-                                      <option value="$10000 - $2000">
-                                        $10000 - $20000
-                                      </option>
-                                      <option value="$20000">$20000+</option>
-                                    </select>
+                                    <label className="form-label">Phone</label>
+                                    <input
+                                      name="phone"
+                                      required
+                                      type="tel"
+                                      className="form-control shadow-none"
+                                      placeholder="Phone no."
+                                      value={formData.phone}
+                                      onChange={handleChange}
+                                    />
                                   </div>
                                 </div>
                                 <div className="col-md-12">
                                   <div className="mb-4">
-                                    <label className="form-label">Comment</label>
+                                    <label className="form-label">
+                                      Comment
+                                    </label>
                                     <textarea
                                       name="message"
                                       className="form-control shadow-none"
                                       rows="4"
-                                      placeholder="Type details about your inquiry"
+                                      placeholder="Type details about your Enquiry"
+                                      value={formData.message}
+                                      onChange={handleChange}
                                     ></textarea>
                                   </div>
                                 </div>
                                 <div className="col-md-12">
                                   <button className="submit-btn" type="submit">
                                     Send Message
-                                    <svg
-                                      className="icon"
-                                      width="20"
-                                      height="20"
-                                      viewBox="0 0 20 20"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M17.5 11.6665V6.6665H12.5"
-                                        stroke="white"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      ></path>
-                                      <path
-                                        d="M17.5 6.6665L10 14.1665L2.5 6.6665"
-                                        stroke="white"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      ></path>
-                                    </svg>
                                   </button>
                                 </div>
                               </div>
@@ -142,16 +168,19 @@ const page = () => {
                         </div>
                         <div className="contact-map-area">
                           <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280012016!2d-74.14448732737499!3d40.69763123331177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1711832776336!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14727.155014394506!2d75.818531!3d22.6616635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1726315173758!5m2!1sen!2sin"
+                            width="600"
+                            height="450"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                           ></iframe>
                         </div>
-                        {/* <div className="frequently-asked-questions">
-                      <h2 className="main-common-title">Frequently Asked Questions
-                      </h2>
-                      <div className="frequently-asked-questions-main">
+                        <div className="frequently-asked-questions">
+                          <h2 className="main-common-title">
+                            Frequently Asked Questions
+                          </h2>
+                          {/* <div className="frequently-asked-questions-main">
                         <div className="accordion" id="accordionExample">
                           <div className="accordion-item">
                             <h4 className="accordion-header" id="headingOne">
@@ -159,8 +188,8 @@ const page = () => {
                                 What does a product designer need to know?
                                 <span className="ms-auto">
                                   <span className="icon ms-4">
-                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus"/>
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus"/>
                                   </span>
                                 </span>
                               </button>
@@ -179,8 +208,8 @@ const page = () => {
                                 What does a product designer need to know?
                                 <span className="ms-auto">
                                   <span className="icon ms-4">
-                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus"/>
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus"/>
                                   </span>
                                 </span>
                               </button>
@@ -200,8 +229,8 @@ const page = () => {
                                 What does a product designer need to know?
                                 <span className="ms-auto">
                                   <span className="icon ms-4">
-                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus"/>
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus"/>
                                   </span>
                                 </span>
                               </button>
@@ -221,8 +250,8 @@ const page = () => {
                                 What does a product designer need to know?
                                 <span className="ms-auto">
                                   <span className="icon ms-4">
-                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus"/>
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus"/>
                                   </span>
                                 </span>
                               </button>
@@ -242,8 +271,8 @@ const page = () => {
                                 What does a product designer need to know?
                                 <span className="ms-auto">
                                   <span className="icon ms-4">
-                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus"/>
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus"/>
                                   </span>
                                 </span>
                               </button>
@@ -258,8 +287,8 @@ const page = () => {
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div> */}
+                      </div> */}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -322,4 +351,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

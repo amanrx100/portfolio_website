@@ -8,9 +8,9 @@ import { FaLinkedin } from "react-icons/fa";
 const Card = () => {
   return (
     <div>
-        <div class="card profile-card">
-                  <div class="card-body">
-                    <div class="image text-center">
+        <div className="card profile-card">
+                  <div className="card-body">
+                    <div className="image text-center">
                       <Image
                         src="/img/profile.jpg"
                         alt="profile"
@@ -18,18 +18,18 @@ const Card = () => {
                         width={500}
                       />
                     </div>
-                    <div class="text">
-                      <h3 class="card-title">Aman Kumawat 👋</h3>
+                    <div className="text">
+                      <h3 className="card-title">Aman Kumawat 👋</h3>
                       <p>
                         A Passionate <span>Full Stack Developer</span> 🖥️ &{" "}
                         <span>Product Designer</span> having{" "}
                         <span>2+ years</span> of Experiences and Completed Over 10+ Projects.
                       </p>
-                      <div class="common-button-groups d-flex">
-                        <a class="btn btn-call d-flex" href="#">
+                      <div className="common-button-groups d-flex">
+                        <a className="btn btn-call d-flex" href="#">
                           
                           <svg
-                            class="icon"
+                            className="icon"
                             width="25"
                             height="24"
                             viewBox="0 0 25 24"
@@ -63,11 +63,11 @@ const Card = () => {
                           Book A call
                         </a>
                         <button
-                          class="btn btn-copy d-flex"
+                          className="btn btn-copy  d-flex"
                           data-clipboard-text="example@example.com"
                         >
                           <svg
-                            class="icon"
+                            className="icon"
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
@@ -87,11 +87,11 @@ const Card = () => {
                               stroke-linejoin="round"
                             />
                           </svg>
-                          Copy Email
+                          <span className='text-[14px]'>Copy Email</span>
                         </button>
                       </div>
-                      <div class="social-media-icon">
-                        <ul class="list-unstyled">
+                      <div className="social-media-icon">
+                        <ul className="list-unstyled">
                           <li>
                             <a href="https://www.facebook.com/profile.php?id=100087493901618&name=xhp_nt_fbaction_open_user" target='_blank'>
                               <FaFacebookF className="m-2"/>

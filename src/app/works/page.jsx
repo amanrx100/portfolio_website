@@ -133,7 +133,7 @@ const Page = () => {
                                     </a>
                                     <p className="subtitle">{data.subtitle}</p>
                                   </div>
-                                  <div className="visite-btn">
+                                  <div className="visite-btn hidden md:block">
                                     <a
                                       href={data.url}
                                       className="no-underline flex"
@@ -171,17 +171,17 @@ const Page = () => {
                           <button
                             onClick={handlePrevPage}
                             disabled={currentPage === 1}
-                            className="px-4 py-2 bg-gray-200 text-black mr-2 rounded"
+                            className="px-3 md:px-4 py-2 bg-gray-200 text-black mr-2 rounded"
                           >
                             Previous
                           </button>
-                          <span className="px-4 py-2">
+                          <span className="px-4 py-2 text-[14px] md:text-[16px]">
                             Page {currentPage} of {totalPages}
                           </span>
                           <button
                             onClick={handleNextPage}
                             disabled={currentPage === totalPages}
-                            className="px-4 py-2 bg-gray-200 text-black ml-2 rounded"
+                            className="px-3 md:px-4 py-2 bg-gray-200 text-black ml-2 rounded"
                           >
                             Next
                           </button>
