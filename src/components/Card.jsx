@@ -23,8 +23,7 @@ const Card = () => {
                       <p>
                         A Passionate <span>Full Stack Developer</span> 🖥️ &{" "}
                         <span>Product Designer</span> having{" "}
-                        <span>12 years</span> of Experiences over 24+ Country
-                        Worldwide.
+                        <span>2+ years</span> of Experiences and Completed Over 10+ Projects.
                       </p>
                       <div class="common-button-groups d-flex">
                         <a class="btn btn-call d-flex" href="#">
@@ -94,22 +93,22 @@ const Card = () => {
                       <div class="social-media-icon">
                         <ul class="list-unstyled">
                           <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/profile.php?id=100087493901618&name=xhp_nt_fbaction_open_user" target='_blank'>
                               <FaFacebookF className="m-2"/>
                             </a>
                           </li>
                           <li>
-                            <a href="#">
+                            <a href="https://www.instagram.com/its_amanrx100/" target='_blank'>
                               <FaInstagram className="m-2"/>
                             </a>
                           </li>
                           <li>
-                            <a href="#">
+                            <a href="https://github.com/amanrx100" target='_blank'>
                               <FaGithub className="m-2"/>
                             </a>
                           </li>
                           <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/aman-kumawat-238074202/" target='_blank'>
                               <FaLinkedin className="m-2"/>
                             </a>
                           </li>

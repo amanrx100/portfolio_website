@@ -1,219 +1,264 @@
-import Card from '@/components/Card'
-import Image from 'next/image'
-import React from 'react'
+"use client"
+import Card from "@/components/Card";
+import Image from "next/image";
+import React, { useState } from "react";
 
-const page = () => {
+const data = [
+  {
+    title: "Quixpay - Fintech Application",
+    subtitle: "NextJS App | UI UX Design",
+    url: "https://quixpayy.netlify.app/",
+    img: "/img/projects/quixpay-min.png",
+  },
+  {
+    title: "x-gnr8 - A Refreshment Drink Website",
+    subtitle: "Wordpress | Graphic Design",
+    url: "https://xgnr8.com/",
+    img: "/img/projects/xgnr-min.png",
+  },
+  {
+    title: "AnimeMerch - Ecommerce Website",
+    subtitle: "NextJS App | UI UX Design",
+    url: "https://animemerch-w7od.onrender.com/",
+    img: "/img/projects/animemerch-min.png",
+  },
+  {
+    title: "Sparkup Tech - Fintech Company Website",
+    subtitle: "NextJS App | ReactJS",
+    url: "https://sparkuptech.in/",
+    img: "/img/projects/sparkup-min.png",
+  },
+  {
+    title: "Aurabotanik - Cosmetic Website",
+    subtitle: "Wordpress | UI UX Design",
+    url: "https://aurabotanik.com/",
+    img: "/img/projects/aurabotanik-min.png",
+  },
+  {
+    title: "goExploreTrip - Booking website",
+    subtitle: "Wordpress | UI UX Design",
+    url: "https://goexploretrip.com/",
+    img: "/img/projects/travel-min.png",
+  },
+  {
+    title: "HomiDrapes - Drapes website",
+    subtitle: "Wordpress | UI UX Design",
+    url: "https://homidrapes.in/",
+    img: "/img/projects/homidrapes-min.png",
+  },
+  {
+    title: "GinniKanhaResort - Booking website",
+    subtitle: "Wordpress | UI UX Design",
+    url: "https://ginnikanharesort.com/",
+    img: "/img/projects/ginni-min.png",
+  },
+];
+
+const ITEMS_PER_PAGE = 3;
+
+const Page = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate the start and end indices for the current page
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+
+  // Slice the data for the current page
+  const currentProjects = data.slice(startIndex, endIndex);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <div>
-        <div id="page-content d-block">
-
-    {/* <!-- main area part start --> */}
-    <main>
-
-      <section class="content-box-area mt-4">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-xl-4">
-             <Card />
-            </div>
-            <div class="col-xl-8">
-              <div class="card content-box-card">
-                <div class="card-body portfolio-card">
-                  <div class="top-info">
-                    <div class="text">
-                      <h1 class="main-title">Check Out My Latest <span>Projects</span></h1>
-                      <p>I'm here to help if you're searching for a product designer to bring your idea to life or a
-                        design partner to help take your business to the next level.</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-area">
-                    <div class="row g-4 parent-container">
-                      <div class="col-lg-12">
-                        <div class="portfolio-item">
-                          <div class="image">
-                            <img src="assets/img/projects/project-1.png" alt="project-1" class="img-fluid w-100"/>
-                            <a href="assets/img/projects/project-1.png" class="gallery-popup full-image-preview parent-container">
-                              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                                <path d="M10 4.167v11.666M4.167 10h11.666"></path>
-                              </svg>
-                            </a>
-                          </div>
-                          <div class="text">
-                            <div class="info">
-                              <a href="portfolio-details.html" class="title">FlowSaaS - SaaS Application Tools</a>
-                              <p class="subtitle">SaaS App | UI UX Design</p>
-                            </div>
-                            <div class="visite-btn">
-                              <a href="portfolio-details.html">Visit Site
-                                <svg class="arrow-up" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M9.91634 4.5835L4.08301 10.4168" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path d="M4.66699 4.5835H9.91699V9.8335" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
+      <div id="page-content d-block">
+        {/* <!-- main area part start --> */}
+        <main>
+          <section className="content-box-area mt-4">
+            <div className="container">
+              <div className="row g-4">
+                <div className="col-xl-4">
+                  <Card />
+                </div>
+                <div className="col-xl-8">
+                  <div className="card content-box-card">
+                    <div className="card-body portfolio-card">
+                      <div className="top-info">
+                        <div className="text">
+                          <h1 className="main-title">
+                            Check Out My Latest <span>Projects</span>
+                          </h1>
+                          <p>
+                            I&#39;m here to help if you&#39;re searching for a product
+                            designer to bring your idea to life or a design
+                            partner to help take your business to the next
+                            level.
+                          </p>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="portfolio-item">
-                          <div class="image">
-                            <img src="assets/img/projects/project-2.png" alt="project-2" class="img-fluid w-100"/>
-                            <a href="assets/img/projects/project-2.png" class="gallery-popup full-image-preview parent-container">
-                              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                                <path d="M10 4.167v11.666M4.167 10h11.666"></path>
-                              </svg>
-                            </a>
-                          </div>
-                          <div class="text">
-                            <div class="info">
-                              <a href="portfolio-details.html" class="title">AIMug - AI Writing Application Tools</a>
-                              <p class="subtitle">Product Design | Application</p>
-                            </div>
-                            <div class="visite-btn">
-                              <a href="portfolio-details.html">Visit Site
-                                <svg class="arrow-up" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M9.91634 4.5835L4.08301 10.4168" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path d="M4.66699 4.5835H9.91699V9.8335" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                              </a>
-                            </div>
+                      <div className="portfolio-area">
+                        <div className="row g-4 parent-container">
+                          <div className="col-lg-12">
+                            {currentProjects.map((data, index) => (
+                              <div key={index} className="portfolio-item">
+                                <div className="image">
+                                  <Image
+                                    src={data.img}
+                                    alt="project-1"
+                                    height={100}
+                                    width={500}
+                                    className="img-fluid w-100"
+                                  />
+                                </div>
+                                <div className="text">
+                                  <div className="info">
+                                    <a
+                                      href={data.url}
+                                      className="title no-underline"
+                                      title="_blank"
+                                    >
+                                      {data.title}
+                                    </a>
+                                    <p className="subtitle">{data.subtitle}</p>
+                                  </div>
+                                  <div className="visite-btn">
+                                    <a
+                                      href={data.url}
+                                      className="no-underline flex"
+                                      target="_blank"
+                                    >
+                                      Visit Site
+                                      <svg
+                                        className="arrow-up"
+                                        width="14"
+                                        height="15"
+                                        viewBox="0 0 14 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M9.91634 4.5835L4.08301 10.4168"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        ></path>
+                                        <path
+                                          d="M4.66699 4.5835H9.91699V9.8335"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        ></path>
+                                      </svg>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="portfolio-item">
-                          <div class="image">
-                            <img src="assets/img/projects/project-3.png" alt="project-3" class="img-fluid w-100"/>
-                            <a href="assets/img/projects/project-3.png" class="gallery-popup full-image-preview parent-container">
-                              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                                <path d="M10 4.167v11.666M4.167 10h11.666"></path>
-                              </svg>
-                            </a>
-                          </div>
-                          <div class="text">
-                            <div class="info">
-                              <a href="portfolio-details.html" class="title">FlowArch - Architecture Service Website</a>
-                              <p class="subtitle">UI UX Design | Development</p>
-                            </div>
-                            <div class="visite-btn">
-                              <a href="portfolio-details.html">Visit Site
-                                <svg class="arrow-up" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M9.91634 4.5835L4.08301 10.4168" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path d="M4.66699 4.5835H9.91699V9.8335" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
+                        {/* Pagination Controls */}
+                        <div className="pagination mt-4">
+                          <button
+                            onClick={handlePrevPage}
+                            disabled={currentPage === 1}
+                            className="px-4 py-2 bg-gray-200 text-black mr-2 rounded"
+                          >
+                            Previous
+                          </button>
+                          <span className="px-4 py-2">
+                            Page {currentPage} of {totalPages}
+                          </span>
+                          <button
+                            onClick={handleNextPage}
+                            disabled={currentPage === totalPages}
+                            className="px-4 py-2 bg-gray-200 text-black ml-2 rounded"
+                          >
+                            Next
+                          </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="pagination">
-                      <ul class="list-unstyled">
-                        <li class="prev">
-                          <button>
-                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
-                            </svg>
-                          </button>
-                        </li>
-                        <li><button>1</button></li>
-                        <li><button>2</button></li>
-                        <li><button>3</button></li>
-                        <li>
-                          <button class="next-page-btn">
-                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
-                            <span class="next-page">
-                              <svg class="icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m6 17 5-5-5-5"></path>
-                                <path d="m13 17 5-5-5-5"></path>
-                              </svg>
-                            </span>
-                            <span class="next-page-number">Next 4 pages</span>
-                          </button>
-                        </li>
-                        <li><button>100</button></li>
-                        <li class="next">
-                          <button>
-                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
 
-                  <div class="work-together-slider">
-                    <div class="slider-main d-flex gap-4 align-items-center">
-                      <div class="slider-item">
-                        <a href="contact.html">Let's 👋 Work Together</a>
-                        <a href="contact.html">Let's 👋 Work Together</a>
-                      </div>
-                      <div class="slider-item">
-                        <a href="contact.html">Let's 👋 Work Together</a>
-                        <a href="contact.html">Let's 👋 Work Together</a>
+                      <div className="work-together-slider">
+                        <div className="slider-main d-flex gap-4 align-items-center">
+                          <div className="slider-item">
+                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                          </div>
+                          <div className="slider-item">
+                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-        {/* <!-- background shape area start --> */}
-        <div class="background-shapes">
-          <div class="shape-1 common-shape">
-            <Image
-              src="/img/bg/banner-shape-1.png"
-              alt="banner-shape-1"
-              height={100}
-              width={1000}
-            />
+          {/* <!-- background shape area start --> */}
+          <div className="background-shapes">
+            <div className="shape-1 common-shape">
+              <Image
+                src="/img/bg/banner-shape-1.png"
+                alt="banner-shape-1"
+                height={100}
+                width={1000}
+              />
+            </div>
+            <div className="shape-2 common-shape">
+              <Image
+                src="/img/bg/banner-shape-1.png"
+                alt="banner-shape-1"
+                height={100}
+                width={1000}
+              />
+            </div>
+            <div className="threed-shape-1 move-with-cursor" data-value="1">
+              <Image
+                src="/img/bg/object-3d-1.png"
+                alt="object-3d-1"
+                height={100}
+                width={60}
+              />
+            </div>
+            <div className="threed-shape-2 move-with-cursor" data-value="1">
+              <Image
+                src="/img/bg/object-3d-2.png"
+                alt="object-3d-2"
+                height={100}
+                width={120}
+              />
+            </div>
           </div>
-          <div class="shape-2 common-shape">
-            <Image
-              src="/img/bg/banner-shape-1.png"
-              alt="banner-shape-1"
-              height={100}
-              width={1000}
-            />
-          </div>
-          <div class="threed-shape-1 move-with-cursor" data-value="1">
-            <Image
-              src="/img/bg/object-3d-1.png"
-              alt="object-3d-1"
-              height={100}
-              width={60}
-            />
-          </div>
-          <div class="threed-shape-2 move-with-cursor" data-value="1">
-            <Image
-              src="/img/bg/object-3d-2.png"
-              alt="object-3d-2"
-              height={100}
-              width={120}
-            />
-          </div>
-        </div>
-    </main>
-    {/* <!-- main area part end --> */}
+        </main>
+        {/* <!-- main area part end --> */}
 
-    {/* <!-- footer part start --> */}
-    <footer class="footer-area">
-      <div class="container">
-        <div class="text text-center">
-        <p>
+        {/* <!-- footer part start --> */}
+        <footer className="footer-area">
+          <div className="container">
+            <div className="text text-center">
+              <p>
                 @Aman 2024, Design By <a href="#">AmanKumawat</a>
               </p>
-        </div>
+            </div>
+          </div>
+        </footer>
+        {/* <!-- footer part end --> */}
       </div>
-    </footer>
-    {/* <!-- footer part end --> */}
-  </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

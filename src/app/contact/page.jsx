@@ -7,80 +7,80 @@ const page = () => {
     <div>
       <div id="page-content">
         <main>
-          <section class="content-box-area mt-4">
-            <div class="container">
-              <div class="row g-4">
-                <div class="col-xl-4">
+          <section className="content-box-area mt-4">
+            <div className="container">
+              <div className="row g-4">
+                <div className="col-xl-4">
                   <Card />
                 </div>
-                <div class="col-xl-8">
-                  <div class="card content-box-card">
-                    <div class="card-body portfolio-card contact-card">
-                      <div class="top-info">
-                        <div class="text">
-                          <h1 class="main-title">
-                            Let's 👋 <span>Work</span> Together
+                <div className="col-xl-8">
+                  <div className="card content-box-card">
+                    <div className="card-body portfolio-card contact-card">
+                      <div className="top-info">
+                        <div className="text">
+                          <h1 className="main-title">
+                            Let&#39;s 👋 <span>Work</span> Together
                           </h1>
                           <p>
-                            I'm here to help if you're searching for a product
+                            I&#39;m here to help if you&#39;re searching for a product
                             designer to bring your idea to life or a design
                             partner to help take your business to the next
                             level.
                           </p>
                         </div>
                       </div>
-                      <div class="contact-area">
-                        <div class="leave-comments-area">
-                          <div class="comments-box">
+                      <div className="contact-area">
+                        <div className="leave-comments-area">
+                          <div className="comments-box">
                             <form
                               id="contact-form"
                               action="assets/mail.php"
                               method="POST"
                             >
-                              <div class="row gx-3">
-                                <div class="col-md-6">
-                                  <div class="mb-4">
-                                    <label class="form-label">Name</label>
+                              <div className="row gx-3">
+                                <div className="col-md-6">
+                                  <div className="mb-4">
+                                    <label className="form-label">Name</label>
                                     <input
                                       name="name"
                                       required=""
                                       type="text"
-                                      class="form-control shadow-none"
+                                      className="form-control shadow-none"
                                       placeholder="Enter your name"
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-6">
-                                  <div class="mb-4">
-                                    <label class="form-label">Email</label>
+                                <div className="col-md-6">
+                                  <div className="mb-4">
+                                    <label className="form-label">Email</label>
                                     <input
                                       name="email"
                                       required=""
                                       type="email"
-                                      class="form-control shadow-none"
+                                      className="form-control shadow-none"
                                       placeholder="Enter your email"
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-6">
-                                  <div class="mb-4">
-                                    <label class="form-label">Subject</label>
+                                <div className="col-md-6">
+                                  <div className="mb-4">
+                                    <label className="form-label">Subject</label>
                                     <input
                                       name="subject"
                                       required=""
                                       type="text"
-                                      class="form-control shadow-none"
+                                      className="form-control shadow-none"
                                       placeholder="Subject"
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-6">
-                                  <div class="mb-4">
-                                    <label class="form-label">Budget</label>
+                                <div className="col-md-6">
+                                  <div className="mb-4">
+                                    <label className="form-label">Budget</label>
                                     <select
                                       name="budget"
                                       required=""
-                                      class="form-select shadow-none"
+                                      className="form-select shadow-none"
                                     >
                                       <option disabled="" selected="">
                                         Select budget...
@@ -96,22 +96,22 @@ const page = () => {
                                     </select>
                                   </div>
                                 </div>
-                                <div class="col-md-12">
-                                  <div class="mb-4">
-                                    <label class="form-label">Comment</label>
+                                <div className="col-md-12">
+                                  <div className="mb-4">
+                                    <label className="form-label">Comment</label>
                                     <textarea
                                       name="message"
-                                      class="form-control shadow-none"
+                                      className="form-control shadow-none"
                                       rows="4"
                                       placeholder="Type details about your inquiry"
                                     ></textarea>
                                   </div>
                                 </div>
-                                <div class="col-md-12">
-                                  <button class="submit-btn" type="submit">
+                                <div className="col-md-12">
+                                  <button className="submit-btn" type="submit">
                                     Send Message
                                     <svg
-                                      class="icon"
+                                      className="icon"
                                       width="20"
                                       height="20"
                                       viewBox="0 0 20 20"
@@ -137,10 +137,10 @@ const page = () => {
                                 </div>
                               </div>
                             </form>
-                            <p class="ajax-response mb-0"></p>
+                            <p className="ajax-response mb-0"></p>
                           </div>
                         </div>
-                        <div class="contact-map-area">
+                        <div className="contact-map-area">
                           <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280012016!2d-74.14448732737499!3d40.69763123331177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1711832776336!5m2!1sen!2sbd"
                             allowfullscreen=""
@@ -148,45 +148,45 @@ const page = () => {
                             referrerpolicy="no-referrer-when-downgrade"
                           ></iframe>
                         </div>
-                        {/* <div class="frequently-asked-questions">
-                      <h2 class="main-common-title">Frequently Asked Questions
+                        {/* <div className="frequently-asked-questions">
+                      <h2 className="main-common-title">Frequently Asked Questions
                       </h2>
-                      <div class="frequently-asked-questions-main">
-                        <div class="accordion" id="accordionExample">
-                          <div class="accordion-item">
-                            <h4 class="accordion-header" id="headingOne">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <div className="frequently-asked-questions-main">
+                        <div className="accordion" id="accordionExample">
+                          <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingOne">
+                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 What does a product designer need to know?
-                                <span class="ms-auto">
-                                  <span class="icon ms-4">
-                                    <img class="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img class="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                <span className="ms-auto">
+                                  <span className="icon ms-4">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
                                   </span>
                                 </span>
                               </button>
                             </h4>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
+                            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div className="accordion-body">
                                 <p>I'm here to help if you're searching for a product designer to bring your idea to
                                   life
                                   or a design partner to help take your business to the next level.</p>
                               </div>
                             </div>
                           </div>
-                          <div class="accordion-item">
-                            <h4 class="accordion-header" id="headingTwo">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingTwo">
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 What does a product designer need to know?
-                                <span class="ms-auto">
-                                  <span class="icon ms-4">
-                                    <img class="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img class="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                <span className="ms-auto">
+                                  <span className="icon ms-4">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
                                   </span>
                                 </span>
                               </button>
                             </h4>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
+                            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div className="accordion-body">
                                 <p>I'm here to help if you're searching for a product designer to bring your idea to
                                   life
                                   or
@@ -194,20 +194,20 @@ const page = () => {
                               </div>
                             </div>
                           </div>
-                          <div class="accordion-item">
-                            <h4 class="accordion-header" id="headingThree">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingThree">
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 What does a product designer need to know?
-                                <span class="ms-auto">
-                                  <span class="icon ms-4">
-                                    <img class="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img class="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                <span className="ms-auto">
+                                  <span className="icon ms-4">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
                                   </span>
                                 </span>
                               </button>
                             </h4>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
+                            <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div className="accordion-body">
                                 <p>I'm here to help if you're searching for a product designer to bring your idea to
                                   life
                                   or
@@ -215,20 +215,20 @@ const page = () => {
                               </div>
                             </div>
                           </div>
-                          <div class="accordion-item">
-                            <h4 class="accordion-header" id="headingFour">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingFour">
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 What does a product designer need to know?
-                                <span class="ms-auto">
-                                  <span class="icon ms-4">
-                                    <img class="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img class="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                <span className="ms-auto">
+                                  <span className="icon ms-4">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
                                   </span>
                                 </span>
                               </button>
                             </h4>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
+                            <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                              <div className="accordion-body">
                                 <p>I'm here to help if you're searching for a product designer to bring your idea to
                                   life
                                   or
@@ -236,20 +236,20 @@ const page = () => {
                               </div>
                             </div>
                           </div>
-                          <div class="accordion-item">
-                            <h4 class="accordion-header" id="headingFive">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingFive">
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                 What does a product designer need to know?
-                                <span class="ms-auto">
-                                  <span class="icon ms-4">
-                                    <img class="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
-                                    <img class="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
+                                <span className="ms-auto">
+                                  <span className="icon ms-4">
+                                    <img className="icon-plus" src="assets/img/icons/plus.svg" alt="plus">
+                                    <img className="icon-minus d-none" src="assets/img/icons/minus.svg" alt="minus">
                                   </span>
                                 </span>
                               </button>
                             </h4>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
+                            <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                              <div className="accordion-body">
                                 <p>I'm here to help if you're searching for a product designer to bring your idea to
                                   life
                                   or
@@ -269,8 +269,8 @@ const page = () => {
           </section>
 
           {/* <!-- background shape area start --> */}
-          <div class="background-shapes">
-            <div class="shape-1 common-shape">
+          <div className="background-shapes">
+            <div className="shape-1 common-shape">
               <Image
                 src="/img/bg/banner-shape-1.png"
                 alt="banner-shape-1"
@@ -278,7 +278,7 @@ const page = () => {
                 width={1000}
               />
             </div>
-            <div class="shape-2 common-shape">
+            <div className="shape-2 common-shape">
               <Image
                 src="/img/bg/banner-shape-1.png"
                 alt="banner-shape-1"
@@ -286,7 +286,7 @@ const page = () => {
                 width={1000}
               />
             </div>
-            <div class="threed-shape-1 move-with-cursor" data-value="1">
+            <div className="threed-shape-1 move-with-cursor" data-value="1">
               <Image
                 src="/img/bg/object-3d-1.png"
                 alt="object-3d-1"
@@ -294,7 +294,7 @@ const page = () => {
                 width={60}
               />
             </div>
-            <div class="threed-shape-2 move-with-cursor" data-value="1">
+            <div className="threed-shape-2 move-with-cursor" data-value="1">
               <Image
                 src="/img/bg/object-3d-2.png"
                 alt="object-3d-2"
@@ -307,9 +307,9 @@ const page = () => {
         {/* <!-- main area part end --> */}
 
         {/* <!-- footer part start --> */}
-        <footer class="footer-area">
-          <div class="container">
-            <div class="text text-center">
+        <footer className="footer-area">
+          <div className="container">
+            <div className="text text-center">
               <p>
                 @Aman 2024, Design By <a href="#">AmanKumawat</a>
               </p>

@@ -1,136 +1,177 @@
 import Image from "next/image";
 
 import Card from "../components/Card";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <main>
-        <section class="home-area">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-xl-4">
+        <section className="home-area">
+          <div className="container">
+            <div className="row g-4">
+              <div className="col-xl-4">
                 <Card />
               </div>
-              <div class="col-xl-4">
-                <div class="row g-4">
-                  <div class="col-lg-12">
-                    <div class="card">
-                      <div class="card-body work-experiance-card">
-                        <h3 class="card-title">Work Experience</h3>
-                        <div class="work-experiance-main">
-                          <ul class="work-experiance-slider list-unstyled">
+              <div className="col-xl-4">
+                <div className="row g-4">
+                  <div className="col-lg-12">
+                    <div className="card">
+                      <div className="card-body work-experiance-card">
+                        <h3 className="card-title">Work Experience</h3>
+                        <div className="work-experiance-main">
+                          <ul className="work-experiance-slider list-unstyled">
                             <li>
-                              <div class="date">
-                                <p>2021-2024</p>
+                              <div className="date">
+                                <p>Jan - Oct 2021</p>
                               </div>
-                              <div class="info">
-                                <div class="icon">
+                              <div className="info">
+                                <div className="icon">
                                   <Image
-                                    src="/img/icons/adobe.svg"
+                                    src="/img/freelancer.jpeg"
                                     alt="adobe"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Adobe</h4>
-                                  <h6 class="subtitle">
-                                    Senior UI UX Designer
-                                  </h6>
+                                <div className="text">
+                                  <h4 className="title">Freelance</h4>
+                                  <h6 className="subtitle">Photo Editor</h6>
                                 </div>
                               </div>
                             </li>
                             <li>
-                              <div class="date">
-                                <p>2021-2024</p>
+                              <div className="date">
+                                <p>Oct - Nov 2021</p>
                               </div>
-                              <div class="info">
-                                <div class="icon">
+                              <div className="info">
+                                <div className="icon">
                                   <Image
-                                    src="/img/icons/google.svg"
+                                    src="/img/hacto.jpeg"
                                     alt="google"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Google Inc.</h4>
-                                  <h6 class="subtitle">
-                                    Senior Product Designer
+                                <div className="text">
+                                  <h4 className="title">Hacktoberfest</h4>
+                                  <h6 className="subtitle">
+                                    Open Source Contributer
                                   </h6>
                                 </div>
                               </div>
                             </li>
                             <li>
-                              <div class="date">
-                                <p>2021-2024</p>
+                              <div className="date">
+                                <p>May - Jul 2023</p>
                               </div>
-                              <div class="info">
-                                <div class="icon">
+                              <div className="info">
+                                <div className="icon">
                                   <Image
-                                    src="/img/icons/meta.svg"
+                                    src="/img/codens.jpeg"
                                     alt="meta"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Meta Inc.</h4>
-                                  <h6 class="subtitle">Product Designer</h6>
+                                <div className="text">
+                                  <h4 className="title">codenscious.ai</h4>
+                                  <h6 className="subtitle">ML Trainee</h6>
                                 </div>
                               </div>
                             </li>
                             <li>
-                              <div class="date">
-                                <p>2021-2024</p>
+                              <div className="date">
+                                <p>May - Jul 2023</p>
                               </div>
-                              <div class="info">
-                                <div class="icon">
+                              <div className="info">
+                                <div className="icon">
                                   <Image
-                                    src="/img/icons/adobe.svg"
+                                    src="/img/emeelan.jpeg"
                                     alt="adobe"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Adobe</h4>
-                                  <h6 class="subtitle">
-                                    Senior UI UX Designer
+                                <div className="text">
+                                  <h4 className="title">Emeelan Pvt. Ltd.</h4>
+                                  <h6 className="subtitle">
+                                    ReactJS Developer
                                   </h6>
                                 </div>
                               </div>
                             </li>
                           </ul>
-                          <ul class="work-experiance-slider list-unstyled">
+                          <ul className="work-experiance-slider list-unstyled">
                             <li>
-                              <div class="date">
-                                <p>2021-2024</p>
+                              <div className="date">
+                                <p>Jan - May 2024</p>
                               </div>
-                              <div class="info">
-                                <div class="icon">
+                              <div className="info">
+                                <div className="icon">
                                   <Image
-                                    src="/img/icons/adobe.svg"
+                                    src="/img/appzeto.png"
                                     alt="adobe"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Adobe</h4>
-                                  <h6 class="subtitle">
-                                    Senior UI UX Designer
+                                <div className="text">
+                                  <h4 className="title">Appzeto</h4>
+                                  <h6 className="subtitle">
+                                    Junior Developer
                                   </h6>
                                 </div>
                               </div>
                             </li>
                             <li>
-                              <div class="date">
-                                <p>2021-2024</p>
+                              <div className="date">
+                                <p>Jul 24 - Present</p>
                               </div>
-                              <div class="info">
-                                <div class="icon">
+                              <div className="info">
+                                <div className="icon">
+                                  <Image
+                                    src="/img/sparkup.jpeg"
+                                    alt="google"
+                                    height={100}
+                                    width={100}
+                                  />
+                                </div>
+                                <div className="text">
+                                  <h4 className="title">Sparkup Tech </h4>
+                                  <h6 className="subtitle">
+                                    Full Stack Developer
+                                  </h6>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div className="date">
+                                <p>Jan - Oct 2021</p>
+                              </div>
+                              <div className="info">
+                                <div className="icon">
+                                  <Image
+                                    src="/img/freelancer.jpeg"
+                                    alt="google"
+                                    height={100}
+                                    width={100}
+                                  />
+                                </div>
+                                <div className="text">
+                                  <h4 className="title">Freelancer</h4>
+                                  <h6 className="subtitle">
+                                    Photo Editor
+                                  </h6>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div className="date">
+                                <p>Jul 24 - Present</p>
+                              </div>
+                              <div className="info">
+                                <div className="icon">
                                   <Image
                                     src="/img/icons/google.svg"
                                     alt="google"
@@ -138,50 +179,10 @@ export default function Home() {
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Google Inc.</h4>
-                                  <h6 class="subtitle">
-                                    Senior Product Designer
-                                  </h6>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="date">
-                                <p>2021-2024</p>
-                              </div>
-                              <div class="info">
-                                <div class="icon">
-                                  <Image
-                                    src="/img/icons/meta.svg"
-                                    alt="meta"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div class="text">
-                                  <h4 class="title">Meta Inc.</h4>
-                                  <h6 class="subtitle">Product Designer</h6>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="date">
-                                <p>2021-2024</p>
-                              </div>
-                              <div class="info">
-                                <div class="icon">
-                                  <Image
-                                    src="/img/icons/adobe.svg"
-                                    alt="adobe"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div class="text">
-                                  <h4 class="title">Adobe</h4>
-                                  <h6 class="subtitle">
-                                    Senior UI UX Designer
+                                <div className="text">
+                                  <h4 className="title">Freelancer</h4>
+                                  <h6 className="subtitle">
+                                    Photo Editor
                                   </h6>
                                 </div>
                               </div>
@@ -191,99 +192,99 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="card expertise-card">
-                      <div class="card-body">
-                        <h3 class="card-title">My Expert Area</h3>
-                        <div class="expertise-main mt-24">
-                          <div class="row g-3">
-                            <div class="col-xl-4 col-md-4 col-sm-6 col-6">
-                              <div class="expertise-item">
-                                <div class="image text-center">
+                  <div className="col-lg-12">
+                    <div className="card expertise-card">
+                      <div className="card-body">
+                        <h3 className="card-title">My Expert Area</h3>
+                        <div className="expertise-main mt-24">
+                          <div className="row g-3">
+                            <div className="col-xl-4 col-md-4 col-sm-6 col-6">
+                              <div className="expertise-item">
+                                <div className="image text-center">
                                   <Image
-                                    src="/img/icons/figma.svg"
+                                    src="/img/react.png"
                                     alt="figma"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Figma</h4>
+                                <div className="text">
+                                  <h4 className="title">ReactJS</h4>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-6 col-6">
-                              <div class="expertise-item">
-                                <div class="image text-center">
+                            <div className="col-xl-4 col-md-4 col-sm-6 col-6">
+                              <div className="expertise-item">
+                                <div className="image text-center">
                                   <Image
-                                    src="/img/icons/notion.svg"
+                                    src="/img/next.svg"
                                     alt="notion"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Notion</h4>
+                                <div className="text">
+                                  <h4 className="title">NextJS</h4>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-6 col-6">
-                              <div class="expertise-item">
-                                <div class="image text-center">
+                            <div className="col-xl-4 col-md-4 col-sm-6 col-6">
+                              <div className="expertise-item">
+                                <div className="image text-center">
                                   <Image
-                                    src="/img/icons/mico.svg"
+                                    src="/img/nodejs.png"
                                     alt="micro"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Miro</h4>
+                                <div className="text">
+                                  <h4 className="title">NodeJS</h4>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-6 col-6">
-                              <div class="expertise-item">
-                                <div class="image text-center">
+                            <div className="col-xl-4 col-md-4 col-sm-6 col-6">
+                              <div className="expertise-item">
+                                <div className="image text-center">
                                   <Image
-                                    src="/img/icons/framer.svg"
+                                    src="/img/java.png"
                                     alt="framer"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Framer</h4>
+                                <div className="text">
+                                  <h4 className="title">Java</h4>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-6 col-6">
-                              <div class="expertise-item">
-                                <div class="image text-center">
+                            <div className="col-xl-4 col-md-4 col-sm-6 col-6">
+                              <div className="expertise-item">
+                                <div className="image text-center">
                                   <Image
-                                    src="/img/icons/webflow.svg"
+                                    src="/img/wordpress.png"
                                     alt="webflow"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Webflow</h4>
+                                <div className="text">
+                                  <h4 className="title">Wordpress</h4>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-6 col-6">
-                              <div class="expertise-item">
-                                <div class="image text-center">
+                            <div className="col-xl-4 col-md-4 col-sm-6 col-6">
+                              <div className="expertise-item">
+                                <div className="image text-center">
                                   <Image
-                                    src="/img/icons/zeplin.svg"
+                                    src="/img/photoshop.png"
                                     alt="zeplin"
                                     height={100}
                                     width={100}
                                   />
                                 </div>
-                                <div class="text">
-                                  <h4 class="title">Zeplin</h4>
+                                <div className="text">
+                                  <h4 className="title">Photoshop</h4>
                                 </div>
                               </div>
                             </div>
@@ -294,15 +295,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4">
-                <div class="card card-projects">
-                  <div class="card-body">
-                    <h3 class="card-title">
+              <div className="col-xl-4">
+                <div className="card card-projects">
+                  <div className="card-body">
+                    <h3 className="card-title">
                       Recent Projects{" "}
-                      <a class="link-btn d-flex" href="portfolio.html">
+                      <Link className="link-btn d-flex no-underline" href="/works">
                         All Projects
                         <svg
-                          class="icon"
+                          className="icon"
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
@@ -331,26 +332,26 @@ export default function Home() {
                             stroke-linejoin="round"
                           />
                         </svg>
-                      </a>
+                      </Link>
                     </h3>
-                    <div class="projects-main mt-24">
-                      <div class="row g-4 parent-container">
-                        <div class="col-lg-12">
-                          <div class="project-item">
-                            <div class="image">
+                    <div className="projects-main mt-24">
+                      <div className="row g-4 parent-container">
+                        <div className="col-lg-12">
+                          <div className="project-item">
+                            <div className="image">
                               <Image
                                 src="/img/projects/project-1.png"
                                 alt="project-1"
-                                class="img-fluid w-100"
+                                className="img-fluid w-100"
                                 height={100}
                                 width={500}
                               />
-                              <a
-                                href="assets/img/projects/project-1.png"
-                                class="gallery-popup full-image-preview parent-container"
+                              <Link
+                                href="/works"
+                                className="gallery-popup full-image-preview parent-container flex items-center justify-center"
                               >
                                 <svg
-                                  class="icon"
+                                  className="icon"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 20 20"
                                   fill="none"
@@ -361,29 +362,29 @@ export default function Home() {
                                 >
                                   <path d="M10 4.167v11.666M4.167 10h11.666"></path>
                                 </svg>
-                              </a>
-                              <div class="info">
-                                <span class="category">Product Design</span>
+                              </Link>
+                              <div className="info">
+                                <span className="category">Product Design</span>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-12">
-                          <div class="project-item">
-                            <div class="image">
+                        <div className="col-lg-12">
+                          <div className="project-item">
+                            <div className="image">
                               <Image
-                                src="/img/projects/project-2.png"
+                                src="/img/projects/xgnr.png"
                                 alt="project-2"
-                                class="img-fluid w-100"
+                                className="img-fluid w-100"
                                 height={100}
                                 width={500}
                               />
-                              <a
-                                href="assets/img/projects/project-2.png"
-                                class="gallery-popup full-image-preview parent-container"
+                              <Link
+                                href="/works"
+                                className="gallery-popup full-image-preview parent-container flex items-center justify-center"
                               >
                                 <svg
-                                  class="icon"
+                                  className="icon"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 20 20"
                                   fill="none"
@@ -394,9 +395,9 @@ export default function Home() {
                                 >
                                   <path d="M10 4.167v11.666M4.167 10h11.666"></path>
                                 </svg>
-                              </a>
-                              <div class="info">
-                                <span class="category">Product Design</span>
+                              </Link>
+                              <div className="info">
+                                <span className="category">Product Design</span>
                               </div>
                             </div>
                           </div>
@@ -407,17 +408,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div class="services-area mt-24">
-              <div class="row g-4">
-                <div class="col-xl-8">
-                  <div class="card services-card">
-                    <div class="card-body">
-                      <h3 class="card-title">
+            <div className="services-area mt-24">
+              <div className="row g-4">
+                <div className="col-xl-8">
+                  <div className="card services-card">
+                    <div className="card-body">
+                      <h3 className="card-title">
                         Services I Offered
-                        <a class="link-btn d-flex" href="services.html">
+                        <a className="link-btn d-flex no-underline" href="/about">
                           See All Services
                           <svg
-                            class="icon"
+                            className="icon"
                             width="20"
                             height="20"
                             viewBox="0 0 20 20"
@@ -448,69 +449,69 @@ export default function Home() {
                           </svg>
                         </a>
                       </h3>
-                      <div class="services-main mt-24">
-                        <div class="row g-4">
-                          <div class="col-md-3 col-sm-6 col-6">
-                            <div class="services-item text-center">
-                              <div class="image">
+                      <div className="services-main mt-24">
+                        <div className="row g-4">
+                          <div className="col-md-3 col-sm-6 col-6">
+                            <div className="services-item text-center">
+                              <div className="image">
                                 <Image
-                                  src="/img/icons/ui-ux.svg"
+                                  src="/img/ui-design.png"
                                   alt="ui-ux"
                                   height={100}
                                   width={60}
                                   className="ml-8"
                                 />
                               </div>
-                              <div class="text">
-                                <h3 class="title">UI UX Design</h3>
+                              <div className="text">
+                                <h3 className="title">UI UX Design</h3>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-3 col-sm-6 col-6">
-                            <div class="services-item text-center">
-                              <div class="image">
+                          <div className="col-md-3 col-sm-6 col-6">
+                            <div className="services-item text-center">
+                              <div className="image">
                                 <Image
-                                  src="/img/icons/app.svg"
+                                  src="/img/app-development.png"
                                   alt="app"
                                   height={100}
                                   width={60}
                                   className="ml-8"
                                 />
                               </div>
-                              <div class="text">
-                                <h3 class="title">Mobile App</h3>
+                              <div className="text">
+                                <h3 className="title">Web Development</h3>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-3 col-sm-6 col-6">
-                            <div class="services-item text-center">
-                              <div class="image">
+                          <div className="col-md-3 col-sm-6 col-6">
+                            <div className="services-item text-center">
+                              <div className="image">
                                 <Image
-                                  src="/img/icons/prd-design.svg"
+                                  src="/img/api.png"
                                   alt="prd-design"
                                   height={100}
                                   width={60}
                                   className="ml-8"
                                 />
                               </div>
-                              <div class="text">
-                                <h3 class="title">Product Design</h3>
+                              <div className="text">
+                                <h3 className="title">API Development</h3>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-3 col-sm-6 col-6">
-                            <div class="services-item text-center">
-                              <div class="image">
+                          <div className="col-md-3 col-sm-6 col-6">
+                            <div className="services-item text-center">
+                              <div className="image">
                                 <Image
-                                  src="/img/icons/branding.svg"
+                                  src="/img/search-engine-optimization.png"
                                   alt="branding"
                                   height={100}
                                   width={60}
                                   className="ml-8"
                                 />
                               </div>
-                              <div class="text">
-                                <h3 class="title">Branding</h3>
+                              <div className="text">
+                                <h3 className="title">SEO</h3>
                               </div>
                             </div>
                           </div>
@@ -519,11 +520,11 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-4">
-                  <div class="card lets-talk-together-card">
-                    <div class="card-body">
-                      <div class="scrolling-info">
-                        <div class="slider-item">
+                <div className="col-xl-4">
+                  <div className="card lets-talk-together-card">
+                    <div className="card-body">
+                      <div className="scrolling-info">
+                        <div className="slider-item">
                           <p>
                             Available For Hire 🚀 Crafting Digital Experiences
                             🎨 Available For Hire 🚀 Crafting Digital
@@ -531,14 +532,14 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <h3 class="card-title">
-                        Let's👋
-                        <span class="d-block">Work Together</span>
+                      <h3 className="card-title">
+                        Let&#39;s👋
+                        <span className="d-block">Work Together</span>
                       </h3>
-                      <a class="link-btn d-flex" href="contact.html">
-                        Let's Talk
+                      <a className="link-btn d-flex no-underline" href="/contact">
+                        Let&#39;s Talk
                         <svg
-                          class="icon"
+                          className="icon"
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
@@ -567,8 +568,8 @@ export default function Home() {
           </div>
         </section>
         {/* <!-- background shape area start --> */}
-        <div class="background-shapes">
-          <div class="shape-1 common-shape">
+        <div className="background-shapes">
+          <div className="shape-1 common-shape">
             <Image
               src="/img/bg/banner-shape-1.png"
               alt="banner-shape-1"
@@ -576,7 +577,7 @@ export default function Home() {
               width={1000}
             />
           </div>
-          <div class="shape-2 common-shape">
+          <div className="shape-2 common-shape">
             <Image
               src="/img/bg/banner-shape-1.png"
               alt="banner-shape-1"
@@ -584,7 +585,7 @@ export default function Home() {
               width={1000}
             />
           </div>
-          <div class="threed-shape-1 move-with-cursor" data-value="1">
+          <div className="threed-shape-1 move-with-cursor" data-value="1">
             <Image
               src="/img/bg/object-3d-1.png"
               alt="object-3d-1"
@@ -592,7 +593,7 @@ export default function Home() {
               width={60}
             />
           </div>
-          <div class="threed-shape-2 move-with-cursor" data-value="1">
+          <div className="threed-shape-2 move-with-cursor" data-value="1">
             <Image
               src="/img/bg/object-3d-2.png"
               alt="object-3d-2"
