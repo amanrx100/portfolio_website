@@ -3,12 +3,51 @@ import Image from "next/image";
 import Card from "../components/Card";
 import Link from "next/link";
 
+const Experience = [
+  {
+    img: "/img/freelancer.jpeg",
+    date: "Jan - Oct 2021",
+    title: "Freelance",
+    subtitle: "Photo Editor",
+  },
+  {
+    img: "/img/hacto.jpeg",
+    date: "Oct - Nov 2021",
+    title: "Hacktoberfest",
+    subtitle: "Open Source Contributer",
+  },
+  {
+    img: "/img/codens.jpeg",
+    date: "May - Jul 2023",
+    title: "codenscious.ai",
+    subtitle: "ML Trainee",
+  },
+  {
+    img: "/img/emeelan.jpeg",
+    date: "May - Jul 2023",
+    title: "Emeelan Pvt. Ltd.",
+    subtitle: "ReactJS Developer",
+  },
+  {
+    img: "/img/appzeto.png",
+    date: "Jan - May 2024",
+    title: "Appzeto",
+    subtitle: "Junior Developer",
+  },
+  {
+    img: "/img/sparkup.jpeg",
+    date: "Jul 24 - Present",
+    title: "Sparkup Tech",
+    subtitle: "Full Stack Developer",
+  },
+];
+
 export default function Home() {
   return (
     <>
-      <main>
-        <section className="home-area">
-          <div className="container">
+      <main className="dark:bg-[#1A1F2C]">
+        <section className="home-area ">
+          <div className="container ">
             <div className="row g-4">
               <div className="col-xl-4">
                 <Card />
@@ -16,186 +55,76 @@ export default function Home() {
               <div className="col-xl-4">
                 <div className="row g-4">
                   <div className="col-lg-12">
-                    <div className="card">
+                    <div className="card dark:bg-black">
                       <div className="card-body work-experiance-card">
-                        <h3 className="card-title">Work Experience</h3>
+                        <h3 className="card-title dark:text-white">
+                          Work Experience
+                        </h3>
                         <div className="work-experiance-main">
                           <ul className="work-experiance-slider list-unstyled">
-                            <li>
-                              <div className="date">
-                                <p>Jan - Oct 2021</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/freelancer.jpeg"
-                                    alt="adobe"
-                                    height={100}
-                                    width={100}
-                                  />
+                            {Experience.map((data, index) => (
+                              <li key={index}>
+                                <div className="date">
+                                  <p>{data.date}</p>
                                 </div>
-                                <div className="text">
-                                  <h4 className="title">Freelance</h4>
-                                  <h6 className="subtitle">Photo Editor</h6>
+                                <div className="info">
+                                  <div className="icon">
+                                    <Image
+                                      src={data.img}
+                                      alt="adobe"
+                                      height={100}
+                                      width={100}
+                                    />
+                                  </div>
+                                  <div className="text">
+                                    <h4 className="title dark:text-gray-200">
+                                      {data.title}
+                                    </h4>
+                                    <h6 className="subtitle">
+                                      {data.subtitle}
+                                    </h6>
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="date">
-                                <p>Oct - Nov 2021</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/hacto.jpeg"
-                                    alt="google"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div className="text">
-                                  <h4 className="title">Hacktoberfest</h4>
-                                  <h6 className="subtitle">
-                                    Open Source Contributer
-                                  </h6>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="date">
-                                <p>May - Jul 2023</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/codens.jpeg"
-                                    alt="meta"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div className="text">
-                                  <h4 className="title">codenscious.ai</h4>
-                                  <h6 className="subtitle">ML Trainee</h6>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="date">
-                                <p>May - Jul 2023</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/emeelan.jpeg"
-                                    alt="adobe"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div className="text">
-                                  <h4 className="title">Emeelan Pvt. Ltd.</h4>
-                                  <h6 className="subtitle">
-                                    ReactJS Developer
-                                  </h6>
-                                </div>
-                              </div>
-                            </li>
+                              </li>
+                            ))}
                           </ul>
                           <ul className="work-experiance-slider list-unstyled">
-                            <li>
-                              <div className="date">
-                                <p>Jan - May 2024</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/appzeto.png"
-                                    alt="adobe"
-                                    height={100}
-                                    width={100}
-                                  />
+                            {Experience.map((data, index) => (
+                              <li key={index}>
+                                <div className="date">
+                                  <p>{data.date}</p>
                                 </div>
-                                <div className="text">
-                                  <h4 className="title">Appzeto</h4>
-                                  <h6 className="subtitle">
-                                    Junior Developer
-                                  </h6>
+                                <div className="info">
+                                  <div className="icon">
+                                    <Image
+                                      src={data.img}
+                                      alt="adobe"
+                                      height={100}
+                                      width={100}
+                                    />
+                                  </div>
+                                  <div className="text">
+                                    <h4 className="title dark:text-gray-200">
+                                      {data.title}
+                                    </h4>
+                                    <h6 className="subtitle">
+                                      {data.subtitle}
+                                    </h6>
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="date">
-                                <p>Jul 24 - Present</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/sparkup.jpeg"
-                                    alt="google"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div className="text">
-                                  <h4 className="title">Sparkup Tech </h4>
-                                  <h6 className="subtitle">
-                                    Full Stack Developer
-                                  </h6>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="date">
-                                <p>Jan - Oct 2021</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/freelancer.jpeg"
-                                    alt="google"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div className="text">
-                                  <h4 className="title">Freelancer</h4>
-                                  <h6 className="subtitle">
-                                    Photo Editor
-                                  </h6>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="date">
-                                <p>Jul 24 - Present</p>
-                              </div>
-                              <div className="info">
-                                <div className="icon">
-                                  <Image
-                                    src="/img/icons/google.svg"
-                                    alt="google"
-                                    height={100}
-                                    width={100}
-                                  />
-                                </div>
-                                <div className="text">
-                                  <h4 className="title">Freelancer</h4>
-                                  <h6 className="subtitle">
-                                    Photo Editor
-                                  </h6>
-                                </div>
-                              </div>
-                            </li>
+                              </li>
+                            ))}
                           </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-12">
-                    <div className="card expertise-card">
+                    <div className="card expertise-card dark:bg-black">
                       <div className="card-body">
-                        <h3 className="card-title">My Expert Area</h3>
+                        <h3 className="card-title dark:text-white">
+                          My Expert Area
+                        </h3>
                         <div className="expertise-main mt-24">
                           <div className="row g-3">
                             <div className="col-xl-4 col-md-4 col-sm-6 col-6">
@@ -296,11 +225,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-xl-4">
-                <div className="card card-projects">
+                <div className="card card-projects dark:bg-black">
                   <div className="card-body">
-                    <h3 className="card-title">
+                    <h3 className="card-title dark:text-white">
                       Recent Projects{" "}
-                      <Link className="link-btn d-flex no-underline" href="/works">
+                      <Link
+                        className="link-btn d-flex no-underline"
+                        href="/works"
+                      >
                         All Projects
                         <svg
                           className="icon"
@@ -411,11 +343,14 @@ export default function Home() {
             <div className="services-area mt-24">
               <div className="row g-4">
                 <div className="col-xl-8">
-                  <div className="card services-card">
+                  <div className="card services-card dark:bg-black">
                     <div className="card-body">
                       <h3 className="card-title">
                         Services I Offered
-                        <a className="link-btn d-flex no-underline" href="/about">
+                        <a
+                          className="link-btn d-flex no-underline"
+                          href="/about"
+                        >
                           See All Services
                           <svg
                             className="icon"
@@ -521,10 +456,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-xl-4">
-                  <div className="card lets-talk-together-card">
+                  <div className="card lets-talk-together-card ">
                     <div className="card-body">
-                      <div className="scrolling-info">
-                        <div className="slider-item">
+                      <div className="scrolling-info ">
+                        <div className="slider-item ">
                           <p>
                             Available For Hire 🚀 Crafting Digital Experiences
                             🎨 Available For Hire 🚀 Crafting Digital
@@ -532,11 +467,14 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <h3 className="card-title">
+                      <h3 className="card-title dark:text-white">
                         Let&#39;s👋
                         <span className="d-block">Work Together</span>
                       </h3>
-                      <a className="link-btn d-flex no-underline" href="/contact">
+                      <a
+                        className="link-btn d-flex no-underline"
+                        href="/contact"
+                      >
                         Let&#39;s Talk
                         <svg
                           className="icon"

@@ -37,6 +37,46 @@ const data = [
   },
 ];
 
+const Experience = [
+  {
+    img: "/img/sparkup.jpeg",
+    date: "Jul 24 - Present",
+    title: "Sparkup Tech",
+    subtitle: "Full Stack Developer",
+  },
+  {
+    img: "/img/appzeto.png",
+    date: "Jan - May 2024",
+    title: "Appzeto",
+    subtitle: "Junior Developer",
+  },
+  {
+    img: "/img/emeelan.jpeg",
+    date: "May - Jul 2023",
+    title: "Emeelan Pvt. Ltd.",
+    subtitle: "ReactJS Developer",
+  },
+  {
+    img: "/img/codens.jpeg",
+    date: "May - Jul 2023",
+    title: "codenscious.ai",
+    subtitle: "ML Trainee",
+  },
+  {
+    img: "/img/hacto.jpeg",
+    date: "Oct - Nov 2021",
+    title: "Hacktoberfest",
+    subtitle: "Open Source Contributer",
+  },
+  {
+    img: "/img/freelancer.jpeg",
+    date: "Jan - Oct 2021",
+    title: "Freelance",
+    subtitle: "Photo Editor",
+  },
+];
+
+
 const Page = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false); // State to manage modal visibility
   const [selectedImage, setSelectedImage] = useState(null); // State to store selected image
@@ -55,24 +95,24 @@ const Page = () => {
       <div id="page-content">
         {/* <!-- main area part start --> */}
         <main>
-          <section className="content-box-area mt-4">
+          <section className="content-box-area mt-4 dark:bg-[#1A1F2C]">
             <div className="container">
               <div className="row g-4">
                 <div className="col-xl-4">
                   <Card />
                 </div>
                 <div className="col-xl-8">
-                  <div className="card content-box-card">
+                  <div className="card content-box-card dark:bg-black">
                     <div className="card-body">
                       <div className="flex flex-col md:flex-row">
                         <div className="text">
-                          <h1 className="main-title">
+                          <h1 className="main-title dark:text-white">
                             Hi, This Is <span className="text-[#4770FF]">Aman</span> 👋
                           </h1>
                           <p className="text-[22px]">
                             A Passionate <b>Full Stack Developer</b> 🖥️ &amp;{" "}
                             <b>Product Designer</b> having
-                            <b>2+ years</b> of Experiences and over 10+ Projects
+                            <b> 2+ years</b> of Experiences and over 10+ Projects
                             completed.{" "}
                           </p>
                         </div>
@@ -82,9 +122,9 @@ const Page = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="counter-area mt-5 md:mt-0">
+                      <div className="counter-area mt-5 md:mt-0 ">
                         <div className="counter">
-                          <div className="counter-item">
+                          <div className="counter-item ">
                             <h3 className="number">02+</h3>
                             <p className="subtitle">Year of Experience</p>
                           </div>
@@ -140,8 +180,47 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
+
+
+                      <div className="">
+                        <h3 className="card-title dark:text-white">
+                          Work Experience
+                        </h3>
+                        <div className="">
+                          <ul className="p-0">
+                            {Experience.map((data, index) => (
+                              <li key={index} className="gap-4 flex justify-between mb-3 bg-gray-100 dark:bg-[#0f1118] md:p-5 p-4 rounded-xl">
+                                <div className="icon">
+                                    <Image
+                                      src={data.img}
+                                      alt="adobe"
+                                      height={100}
+                                      width={50}
+                                    />
+                                  </div>
+                               
+                                <div className="info">
+                                
+                                  <div className="text">
+                                    <h5 className="title dark:text-white">
+                                      {data.title}
+                                    </h5>
+                                    <h6 className="text-gray-500">
+                                      {data.subtitle}
+                                    </h6>
+                                  </div>
+                                </div>
+                                <div className="date">
+                                  <p>{data.date}</p>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
                       <div className="awards-recognitions">
-                        <h2 className="main-common-title">
+                        <h2 className="main-common-title dark:text-white">
                           Courses and Certificates
                         </h2>
                         <div className="awards-recognitions-main">
@@ -149,8 +228,8 @@ const Page = () => {
                             <li>
                               <div className="d-block w-100">
                                 {data.map((data, index) => (
-                                  <div key={index} className="awards-item ">
-                                    <div className="award-name">
+                                  <div key={index} className="awards-item dark:bg-[#0f1118] bg-[#F0F2F5]">
+                                    <div className="award-name ">
                                       <div
                                         onClick={() => openModal(data.img)}
                                         style={{ cursor: "pointer" }}
@@ -162,13 +241,13 @@ const Page = () => {
                                           width={200}
                                         />
                                       </div>
-                                      <div className="text">
-                                        <h4 className="max-w-[300px] text-[22px]">
+                                      <div className="text max-w-[300px]">
+                                        <h4 className="text-[22px] dark:text-white">
                                           {data.title}
                                         </h4>
-                                        <h4 className="title">
+                                        <h5 className="text-[18px] dark:text-[#a8aaac]">
                                           {data.subtitle}
-                                        </h4>
+                                        </h5>
                                         <p className="year">{data.duration}</p>
                                       </div>
                                     </div>
