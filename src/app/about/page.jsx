@@ -95,24 +95,24 @@ const Page = () => {
       <div id="page-content">
         {/* <!-- main area part start --> */}
         <main>
-          <section className="content-box-area mt-4 dark:bg-[#1A1F2C]">
+          <section className="content-box-area mt-4">
             <div className="container">
               <div className="row g-4">
                 <div className="col-xl-4">
                   <Card />
                 </div>
                 <div className="col-xl-8">
-                  <div className="card content-box-card dark:bg-black">
+                  <div className="card content-box-card">
                     <div className="card-body">
                       <div className="flex flex-col md:flex-row">
                         <div className="text">
-                          <h1 className="main-title dark:text-white">
+                          <h1 className="main-title ">
                             Hi, This Is <span className="text-[#4770FF]">Aman</span> 👋
                           </h1>
                           <p className="text-[22px]">
                             A Passionate <b>Full Stack Developer</b> 🖥️ &amp;{" "}
                             <b>Product Designer</b> having
-                            <b>2+ years</b> of Experiences and over 10+ Projects
+                            <b> 2+ years</b> of Experiences and over 10+ Projects
                             completed.{" "}
                           </p>
                         </div>
@@ -183,13 +183,13 @@ const Page = () => {
 
 
                       <div className="">
-                        <h3 className="card-title dark:text-white">
+                        <h3 className="card-title ">
                           Work Experience
                         </h3>
                         <div className="">
                           <ul className="p-0">
                             {Experience.map((data, index) => (
-                              <li key={index} className="gap-4 flex justify-between mb-3 bg-gray-100 dark:bg-[#0f1118] md:p-5 p-4 rounded-xl">
+                              <li key={index} className="gap-4 flex justify-between mb-3 bg-gray-100 md:p-5 p-4 rounded-xl">
                                 <div className="icon">
                                     <Image
                                       src={data.img}
@@ -202,7 +202,7 @@ const Page = () => {
                                 <div className="info">
                                 
                                   <div className="text">
-                                    <h5 className="title dark:text-white">
+                                    <h5 className="title">
                                       {data.title}
                                     </h5>
                                     <h6 className="text-gray-500">
@@ -220,7 +220,7 @@ const Page = () => {
                       </div>
 
                       <div className="awards-recognitions">
-                        <h2 className="main-common-title dark:text-white">
+                        <h2 className="main-common-title">
                           Courses and Certificates
                         </h2>
                         <div className="awards-recognitions-main">
@@ -228,7 +228,7 @@ const Page = () => {
                             <li>
                               <div className="d-block w-100">
                                 {data.map((data, index) => (
-                                  <div key={index} className="awards-item dark:bg-[#0f1118] bg-[#F0F2F5]">
+                                  <div key={index} className="awards-item  bg-[#F0F2F5]">
                                     <div className="award-name ">
                                       <div
                                         onClick={() => openModal(data.img)}
@@ -242,10 +242,10 @@ const Page = () => {
                                         />
                                       </div>
                                       <div className="text max-w-[300px]">
-                                        <h4 className="text-[22px] dark:text-white">
+                                        <h4 className="text-[22px]">
                                           {data.title}
                                         </h4>
-                                        <h5 className="text-[18px] dark:text-[#a8aaac]">
+                                        <h5 className="text-[18px]">
                                           {data.subtitle}
                                         </h5>
                                         <p className="year">{data.duration}</p>

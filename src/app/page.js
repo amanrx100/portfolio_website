@@ -45,7 +45,7 @@ const Experience = [
 export default function Home() {
   return (
     <>
-      <main className="dark:bg-[#1A1F2C]">
+      <main className="">
         <section className="home-area ">
           <div className="container ">
             <div className="row g-4">
@@ -55,9 +55,9 @@ export default function Home() {
               <div className="col-xl-4">
                 <div className="row g-4">
                   <div className="col-lg-12">
-                    <div className="card dark:bg-black">
+                    <div className="card ">
                       <div className="card-body work-experiance-card">
-                        <h3 className="card-title dark:text-white">
+                        <h3 className="card-title ">
                           Work Experience
                         </h3>
                         <div className="work-experiance-main">
@@ -77,7 +77,7 @@ export default function Home() {
                                     />
                                   </div>
                                   <div className="text">
-                                    <h4 className="title dark:text-gray-200">
+                                    <h4 className="title">
                                       {data.title}
                                     </h4>
                                     <h6 className="subtitle">
@@ -104,7 +104,7 @@ export default function Home() {
                                     />
                                   </div>
                                   <div className="text">
-                                    <h4 className="title dark:text-gray-200">
+                                    <h4 className="title">
                                       {data.title}
                                     </h4>
                                     <h6 className="subtitle">
@@ -120,9 +120,9 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-lg-12">
-                    <div className="card expertise-card dark:bg-black">
+                    <div className="card expertise-card ">
                       <div className="card-body">
-                        <h3 className="card-title dark:text-white">
+                        <h3 className="card-title ">
                           My Expert Area
                         </h3>
                         <div className="expertise-main mt-24">
@@ -225,9 +225,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-xl-4">
-                <div className="card card-projects dark:bg-black">
+                <div className="card card-projects ">
                   <div className="card-body">
-                    <h3 className="card-title dark:text-white">
+                    <h3 className="card-title ">
                       Recent Projects{" "}
                       <Link
                         className="link-btn d-flex no-underline"
@@ -343,7 +343,7 @@ export default function Home() {
             <div className="services-area mt-24">
               <div className="row g-4">
                 <div className="col-xl-8">
-                  <div className="card services-card dark:bg-black">
+                  <div className="card services-card">
                     <div className="card-body">
                       <h3 className="card-title">
                         Services I Offered
@@ -467,7 +467,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <h3 className="card-title dark:text-white">
+                      <h3 className="card-title">
                         Let&#39;s👋
                         <span className="d-block">Work Together</span>
                       </h3>

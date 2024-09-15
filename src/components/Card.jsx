@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Card = () => {
   return (
     <div>
-        <div className="card profile-card dark:bg-black">
+        <div className="card profile-card ">
                   <div className="card-body">
                     <div className="image text-center">
                       <Image
@@ -19,8 +19,8 @@ const Card = () => {
                       />
                     </div>
                     <div className="text">
-                      <h3 className="card-title dark:text-white">Aman Kumawat 👋</h3>
-                      <p className='dark:text-[#c3c4c5] text-[#576076]'>
+                      <h3 className="card-title ">Aman Kumawat 👋</h3>
+                      <p className=' text-[#576076]'>
                         A Passionate <strong>Full Stack Developer</strong> 🖥️ &{" "}
                         <strong>Product Designer</strong> having{" "}
                         <strong>2+ years</strong> of Experiences and Completed Over 10+ Projects.
@@ -87,29 +87,29 @@ const Card = () => {
                               stroke-linejoin="round"
                             />
                           </svg>
-                          <span className='text-[14px] dark:text-white text-black'>Copy Email</span>
+                          <span className='text-[14px]  text-black'>Copy Email</span>
                         </button>
                       </div>
                       <div className="social-media-icon">
                         <ul className="list-unstyled">
                           <li>
                             <a href="https://www.facebook.com/profile.php?id=100087493901618&name=xhp_nt_fbaction_open_user" target='_blank'>
-                              <FaFacebookF className="m-2 dark:text-white"/>
+                              <FaFacebookF className="m-2"/>
                             </a>
                           </li>
                           <li>
                             <a href="https://www.instagram.com/its_amanrx100/" target='_blank'>
-                              <FaInstagram className="m-2 dark:text-white"/>
+                              <FaInstagram className="m-2 "/>
                             </a>
                           </li>
                           <li>
                             <a href="https://github.com/amanrx100" target='_blank'>
-                              <FaGithub className="m-2 dark:text-white"/>
+                              <FaGithub className="m-2 "/>
                             </a>
                           </li>
                           <li>
                             <a href="https://www.linkedin.com/in/aman-kumawat-238074202/" target='_blank'>
-                              <FaLinkedin className="m-2 dark:text-white"/>
+                              <FaLinkedin className="m-2"/>
                             </a>
                           </li>
                         </ul>
