@@ -112,7 +112,7 @@ const Page = () => {
                           <p className="text-[22px]">
                             A Passionate <b>Full Stack Developer</b> 🖥️ &amp;{" "}
                             <b>Product Designer</b> having
-                            <b> 2+ years</b> of Experiences and over 10+ Projects
+                            <b>2+ years</b> of Experiences and over 10+ Projects
                             completed.{" "}
                           </p>
                         </div>
