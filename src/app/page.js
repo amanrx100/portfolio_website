@@ -57,9 +57,7 @@ export default function Home() {
                   <div className="col-lg-12">
                     <div className="card ">
                       <div className="card-body work-experiance-card">
-                        <h3 className="card-title ">
-                          Work Experience
-                        </h3>
+                        <h3 className="card-title ">Work Experience</h3>
                         <div className="work-experiance-main">
                           <ul className="work-experiance-slider list-unstyled">
                             {Experience.map((data, index) => (
@@ -77,9 +75,7 @@ export default function Home() {
                                     />
                                   </div>
                                   <div className="text">
-                                    <h4 className="title">
-                                      {data.title}
-                                    </h4>
+                                    <h4 className="title">{data.title}</h4>
                                     <h6 className="subtitle">
                                       {data.subtitle}
                                     </h6>
@@ -104,9 +100,7 @@ export default function Home() {
                                     />
                                   </div>
                                   <div className="text">
-                                    <h4 className="title">
-                                      {data.title}
-                                    </h4>
+                                    <h4 className="title">{data.title}</h4>
                                     <h6 className="subtitle">
                                       {data.subtitle}
                                     </h6>
@@ -122,9 +116,7 @@ export default function Home() {
                   <div className="col-lg-12">
                     <div className="card expertise-card ">
                       <div className="card-body">
-                        <h3 className="card-title ">
-                          My Expert Area
-                        </h3>
+                        <h3 className="card-title ">My Expert Area</h3>
                         <div className="expertise-main mt-24">
                           <div className="row g-3">
                             <div className="col-xl-4 col-md-4 col-sm-6 col-6">
