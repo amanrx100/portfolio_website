@@ -31,7 +31,7 @@ const data = [
   },
   {
     title: "Python for Data Science",
-    subtitle:"IBM",
+    subtitle: "IBM",
     img: "/img/python.png",
     duration: "July 2022",
   },
@@ -76,7 +76,6 @@ const Experience = [
   },
 ];
 
-
 const Page = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false); // State to manage modal visibility
   const [selectedImage, setSelectedImage] = useState(null); // State to store selected image
@@ -107,13 +106,14 @@ const Page = () => {
                       <div className="flex flex-col md:flex-row">
                         <div className="text">
                           <h1 className="main-title ">
-                            Hi, This Is <span className="text-[#4770FF]">Aman</span> 👋
+                            Hi, This Is{" "}
+                            <span className="text-[#4770FF]">Aman</span> 👋
                           </h1>
                           <p className="text-[22px]">
                             A Passionate <b>Full Stack Developer</b> 🖥️ &amp;{" "}
                             <b>Product Designer</b> having
-                            <b> 2+ years</b> of Experiences and over 10+ Projects
-                            completed.{" "}
+                            <b> 2+ years</b> of Experiences and over 30+
+                            Projects completed.{" "}
                           </p>
                         </div>
                         <div className="available-btn">
@@ -129,15 +129,15 @@ const Page = () => {
                             <p className="subtitle">Year of Experience</p>
                           </div>
                           <div className="counter-item">
-                            <h3 className="number">10+</h3>
+                            <h3 className="number">30+</h3>
                             <p className="subtitle">Project Completed</p>
                           </div>
                           <div className="counter-item">
-                            <h3 className="number">02+</h3>
+                            <h3 className="number">05+</h3>
                             <p className="subtitle">Happy Client</p>
                           </div>
                         </div>
-                        <div className="circle-area hidden md:block" >
+                        <div className="circle-area hidden md:block">
                           <div className="circle-text p-3">
                             <Image
                               className="circle-image"
@@ -181,30 +181,27 @@ const Page = () => {
                         </div>
                       </div>
 
-
                       <div className="">
-                        <h3 className="card-title ">
-                          Work Experience
-                        </h3>
+                        <h3 className="card-title ">Work Experience</h3>
                         <div className="">
                           <ul className="p-0">
                             {Experience.map((data, index) => (
-                              <li key={index} className="gap-4 flex justify-between mb-3 bg-gray-100 md:p-5 p-4 rounded-xl">
+                              <li
+                                key={index}
+                                className="gap-4 flex justify-between mb-3 bg-gray-100 md:p-5 p-4 rounded-xl"
+                              >
                                 <div className="icon">
-                                    <Image
-                                      src={data.img}
-                                      alt="adobe"
-                                      height={100}
-                                      width={50}
-                                    />
-                                  </div>
-                               
+                                  <Image
+                                    src={data.img}
+                                    alt="adobe"
+                                    height={100}
+                                    width={50}
+                                  />
+                                </div>
+
                                 <div className="info">
-                                
                                   <div className="text">
-                                    <h5 className="title">
-                                      {data.title}
-                                    </h5>
+                                    <h5 className="title">{data.title}</h5>
                                     <h6 className="text-gray-500">
                                       {data.subtitle}
                                     </h6>
@@ -228,7 +225,10 @@ const Page = () => {
                             <li>
                               <div className="d-block w-100">
                                 {data.map((data, index) => (
-                                  <div key={index} className="awards-item  bg-[#F0F2F5]">
+                                  <div
+                                    key={index}
+                                    className="awards-item  bg-[#F0F2F5]"
+                                  >
                                     <div className="award-name ">
                                       <div
                                         onClick={() => openModal(data.img)}
@@ -297,12 +297,20 @@ const Page = () => {
                       <div className="work-together-slider">
                         <div className="slider-main d-flex gap-4 align-items-center">
                           <div className="slider-item">
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
                           </div>
                           <div className="slider-item">
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
                           </div>
                         </div>
                       </div>

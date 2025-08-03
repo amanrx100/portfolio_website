@@ -197,15 +197,21 @@ export default function Home() {
                             <div className="col-xl-4 col-md-4 col-sm-6 col-6">
                               <div className="expertise-item">
                                 <div className="image text-center">
-                                  <Image
+                                  {/* <Image
                                     src="/img/photoshop.png"
                                     alt="zeplin"
                                     height={100}
                                     width={100}
+                                  /> */}
+                                  <img
+                                    width="48"
+                                    height="48"
+                                    src="https://img.icons8.com/color/48/angularjs.png"
+                                    alt="angularjs"
                                   />
                                 </div>
                                 <div className="text">
-                                  <h4 className="title">Photoshop</h4>
+                                  <h4 className="title">Angular</h4>
                                 </div>
                               </div>
                             </div>

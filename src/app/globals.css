@@ -47,7 +47,8 @@ html {
 
 :root {
     --font-family: "Bricolage Grotesque", sans-serif;
-    --primary: #4770FF;
+    --primary: #E97451;
+    --secondary: #CC5500	;
     --black: #1A1F2C;
     --light-black: #576076;
     --white: #ffffff;
@@ -438,7 +439,7 @@ p {
 }
 
 .profile-card .image img {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .profile-card .text {
@@ -448,7 +449,7 @@ p {
 .profile-card .text p {
     margin-top: 8px;
     /* color: var(--light-black); */
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.5em;
 }
@@ -474,7 +475,8 @@ p {
 }
 
 .common-button-groups .btn:hover {
-    background-color: #2563EB;
+    background-color: #CC5500;
+    color: white;
 }
 
 .common-button-groups .btn .icon {
@@ -524,7 +526,7 @@ p {
 }
 
 .social-media-icon {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .social-media-icon ul li {

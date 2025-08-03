@@ -20,7 +20,9 @@ const getInitialTheme = () => {
       return savedTheme;
     }
     // If no saved theme, fallback to system preference
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     return prefersDarkMode ? "dark" : "light";
   }
   return "light"; // Default to light theme for SSR or initial load
@@ -59,7 +61,7 @@ const Navbar = () => {
           <div className="logo">
             <Link href="/">
               <span className="text-2xl font-bold text-gray-800 py-3">
-                Port<span className="text-blue-500">Folio</span>
+                Port<span className="text-[var(--secondary)]">Folio</span>
               </span>
             </Link>
           </div>
@@ -69,7 +71,7 @@ const Navbar = () => {
             <ul className="flex space-x-10 mt-3">
               <li className="">
                 <Link
-                  className="flex items-center text-gray-600 hover:text-blue-500 hover:bg-gray-100 rounded-lg p-2 no-underline"
+                  className="flex items-center text-gray-600 hover:text-[var(--secondary)] hover:bg-gray-100 rounded-lg p-2 no-underline"
                   href="/"
                   onClick={closeMobileMenu}
                 >
@@ -79,7 +81,7 @@ const Navbar = () => {
               </li>
               <li className="">
                 <Link
-                  className="flex items-center text-gray-600 hover:text-blue-500 hover:bg-gray-100 rounded-lg p-2 no-underline"
+                  className="flex items-center text-gray-600 hover:text-[var(--secondary)] hover:bg-gray-100 rounded-lg p-2 no-underline"
                   href="/about"
                   onClick={closeMobileMenu}
                 >
@@ -89,7 +91,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="flex items-center text-gray-600 hover:text-blue-500 hover:bg-gray-100 rounded-lg p-2 no-underline"
+                  className="flex items-center text-gray-600 hover:text-[var(--secondary)] hover:bg-gray-100 rounded-lg p-2 no-underline"
                   href="/works"
                   onClick={closeMobileMenu}
                 >
@@ -99,7 +101,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="flex items-center text-gray-600 hover:text-blue-500 hover:bg-gray-100 rounded-lg p-2 no-underline"
+                  className="flex items-center text-gray-600 hover:text-[var(--secondary)] hover:bg-gray-100 rounded-lg p-2 no-underline"
                   href="/blog"
                   onClick={closeMobileMenu}
                 >
@@ -109,7 +111,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="flex items-center text-gray-600 hover:text-blue-500 hover:bg-gray-100 rounded-lg p-2 no-underline"
+                  className="flex items-center text-gray-600 hover:text-[var(--secondary)] hover:bg-gray-100 rounded-lg p-2 no-underline"
                   href="/contact"
                   onClick={closeMobileMenu}
                 >
@@ -165,7 +167,7 @@ const Navbar = () => {
           <ul className="flex flex-col items-start p-6 space-y-10 font-[600]">
             <li className="">
               <Link
-                className="flex items-center text-gray-600 hover:text-blue-500 no-underline"
+                className="flex items-center text-gray-600 hover:text-[var(--secondary)] no-underline"
                 href="/"
                 onClick={closeMobileMenu}
               >
@@ -175,7 +177,7 @@ const Navbar = () => {
             </li>
             <li className="">
               <Link
-                className="flex items-center text-gray-600 hover:text-blue-500 no-underline"
+                className="flex items-center text-gray-600 hover:text-[var(--secondary)] no-underline"
                 href="/about"
                 onClick={closeMobileMenu}
               >
@@ -185,7 +187,7 @@ const Navbar = () => {
             </li>
             <li className="">
               <Link
-                className="flex items-center text-gray-600 hover:text-blue-500 no-underline"
+                className="flex items-center text-gray-600 hover:text-[var(--secondary)] no-underline"
                 href="/works"
                 onClick={closeMobileMenu}
               >
@@ -195,7 +197,7 @@ const Navbar = () => {
             </li>
             <li className="">
               <Link
-                className="flex items-center text-gray-600 hover:text-blue-500 no-underline"
+                className="flex items-center text-gray-600 hover:text-[var(--secondary)] no-underline"
                 href="/blog"
                 onClick={closeMobileMenu}
               >
@@ -205,7 +207,7 @@ const Navbar = () => {
             </li>
             <li className="">
               <Link
-                className="flex items-center text-gray-600 hover:text-blue-500 no-underline"
+                className="flex items-center text-gray-600 hover:text-[var(--secondary)] no-underline"
                 href="/contact"
                 onClick={closeMobileMenu}
               >
