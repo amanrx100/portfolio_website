@@ -30,7 +30,7 @@ const Experience = [
   },
   {
     img: "/img/appzeto.png",
-    date: "Jan - May 2024",
+    date: "Sept 2023 - June 2024",
     title: "Appzeto",
     subtitle: "Junior Developer",
   },
