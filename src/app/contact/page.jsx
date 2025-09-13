@@ -176,11 +176,11 @@ const Page = () => {
                             referrerpolicy="no-referrer-when-downgrade"
                           ></iframe>
                         </div>
-                        <div className="frequently-asked-questions">
+                        {/* <div className="frequently-asked-questions">
                           <h2 className="main-common-title">
                             Frequently Asked Questions
                           </h2>
-                          {/* <div className="frequently-asked-questions-main">
+                          <div className="frequently-asked-questions-main">
                         <div className="accordion" id="accordionExample">
                           <div className="accordion-item">
                             <h4 className="accordion-header" id="headingOne">
@@ -287,8 +287,8 @@ const Page = () => {
                             </div>
                           </div>
                         </div>
-                      </div> */}
-                        </div>
+                      </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>

@@ -24,7 +24,7 @@ const Card = () => {
             <div className="common-button-groups d-flex">
               <a
                 className="btn btn-call d-flex"
-                href="/Aman_SDE1.pdf"
+                href="/SDE-AMAN-resume.pdf"
                 download="Aman_Resume.pdf"
               >
                 <SiReaddotcv className="inline mt-1 mr-2" />

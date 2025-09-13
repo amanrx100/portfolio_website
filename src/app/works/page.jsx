@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Card from "@/components/Card";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -6,9 +6,45 @@ import React, { useState } from "react";
 const data = [
   {
     title: "Quixpay - Fintech Application",
-    subtitle: "NextJS App | UI UX Design",
+    subtitle: "NextJS | UI UX Design",
     url: "https://quixpayy.netlify.app/",
     img: "/img/projects/quixpay-min.png",
+  },
+  {
+    title: "Infinitix Technologies - Company Website",
+    subtitle: "Reactjs | Tailwind",
+    url: "https://infinitixtechnologies.com/",
+    img: "/img/projects/infinitix.png",
+  },
+  {
+    title: "Payflixo - Fintech Website",
+    subtitle: "NextJS | Tailwind",
+    url: "https://payflixo.com/",
+    img: "/img/projects/payflixo.png",
+  },
+  {
+    title: "MyTalentWin - Contest Application",
+    subtitle: "Reactjs | Nodejs",
+    url: "https://mytalentwin.com/",
+    img: "/img/projects/mytalent.png",
+  },
+  {
+    title: "Sparkup Tech - Fintech Company Website",
+    subtitle: "NextJS | ReactJS",
+    url: "https://sparkuptech.in/",
+    img: "/img/projects/sparkup-min.png",
+  },
+  {
+    title: "KoinnPay - Fintech Website",
+    subtitle: "Nextjs | Tailwind",
+    url: "https://koinnpay.com/",
+    img: "/img/projects/koinnpay.png",
+  },
+  {
+    title: "Koinnbiz - Business Website",
+    subtitle: "Html | CSS | JS",
+    url: "https://koinnbiz.com/",
+    img: "/img/projects/koinnbiz.png",
   },
   {
     title: "x-gnr8 - A Refreshment Drink Website",
@@ -22,12 +58,7 @@ const data = [
     url: "https://animemerch-w7od.onrender.com/",
     img: "/img/projects/animemerch-min.png",
   },
-  {
-    title: "Sparkup Tech - Fintech Company Website",
-    subtitle: "NextJS App | ReactJS",
-    url: "https://sparkuptech.in/",
-    img: "/img/projects/sparkup-min.png",
-  },
+
   {
     title: "Aurabotanik - Cosmetic Website",
     subtitle: "Wordpress | UI UX Design",
@@ -54,7 +85,7 @@ const data = [
   },
 ];
 
-const ITEMS_PER_PAGE = 3;
+const ITEMS_PER_PAGE = 5;
 
 const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -83,7 +114,7 @@ const Page = () => {
 
   return (
     <div>
-      <div id="page-content d-block">
+      <div id="page-content d-block ">
         {/* <!-- main area part start --> */}
         <main>
           <section className="content-box-area mt-4">
@@ -92,7 +123,10 @@ const Page = () => {
                 <div className="col-xl-4">
                   <Card />
                 </div>
-                <div className="col-xl-8">
+                <div
+                  className="col-xl-8 overflow-y-scroll"
+                  style={{ height: "75vh" }}
+                >
                   <div className="card content-box-card">
                     <div className="card-body portfolio-card">
                       <div className="top-info">
@@ -101,10 +135,10 @@ const Page = () => {
                             Check Out My Latest <span>Projects</span>
                           </h1>
                           <p>
-                            I&#39;m here to help if you&#39;re searching for a product
-                            designer to bring your idea to life or a design
-                            partner to help take your business to the next
-                            level.
+                            I&#39;m here to help if you&#39;re searching for a
+                            product designer to bring your idea to life or a
+                            design partner to help take your business to the
+                            next level.
                           </p>
                         </div>
                       </div>
@@ -191,12 +225,20 @@ const Page = () => {
                       <div className="work-together-slider">
                         <div className="slider-main d-flex gap-4 align-items-center">
                           <div className="slider-item">
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
                           </div>
                           <div className="slider-item">
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
-                            <a href="contact.html">Let&#39;s 👋 Work Together</a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
+                            <a href="contact.html">
+                              Let&#39;s 👋 Work Together
+                            </a>
                           </div>
                         </div>
                       </div>
